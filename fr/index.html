@@ -3,31 +3,60 @@
 	<head>
 		<title>Tock</title>
 		<link rel="shortcut icon" href="images/logo/favicon.png">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+		<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+		<script crossorigin src="https://unpkg.com/@emotion/core@10/dist/core.umd.min.js"></script>
+		<script crossorigin src="https://unpkg.com/@emotion/styled@10/dist/styled.umd.min.js"></script>
+		<script crossorigin src="https://unpkg.com/emotion-theming@10/dist/emotion-theming.umd.min.js"></script>
+		<script
+				crossorigin
+				src="https://unpkg.com/tock-react-kit@latest/build/tock-react-kit.umd.js"
+		></script>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css"/>
+		</noscript>
+		<style>
+			.sticky {
+			position: fixed;
+			bottom: 2vh;
+			width: 100%;
+		}
+		</style>
 	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+	<body class="homepage is-preload" style= "z-index: 1">
+	<div id="page-wrapper" >
 
+			</div>
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo"><img src="images/logo/Logo_Tock_White.svg" style="width: 50%;" alt="Logo" /> Tock</a></h1>
-								<p><em>The Open Conversation Kit</em></p>
-							</header>
-							<footer>
-								<p><a href="https://github.com/theopenconversationkit/tock" target="_repo_tock" title="Projet et sources disponibles sur GitHub">
-									Sources sur <span class="icon brands fa-github label"></span></a></p>
-								<p><a href="https://gitter.im/tockchat/Lobby" target="_gitter" title="Retrouvez la communauté Tock sur Gitter (tchat)">
-									Parlons-en sur <span class="icon brands fa-gitter label"></span></a></a></p><br>
-								<p><a href="#banner" class="scrolly">En savoir plus... <span class="icon solid fa-chevron-down"></span></a></p>
-							</footer>
-						</div>
+				<!-- Inner -->
+				<div class="inner">
+					<header>
+						<h1><a href="index.html" id="logo"><img src="images/logo/Logo_Tock_White.svg"
+																style="width: 50%;" alt="Logo"/> Tock</a></h1>
+						<p><em>The Open Conversation Kit</em></p>
+					</header>
+					<footer>
+						<p><a href="https://github.com/theopenconversationkit/tock" target="_repo_tock"
+							  title="Projet et sources disponibles sur GitHub">
+							Sources sur <span class="icon brands fa-github label"></span></a></p>
+						<p><a href="https://gitter.im/tockchat/Lobby" target="_gitter"
+							  title="Retrouvez la communauté Tock sur Gitter (tchat)">
+							Parlons-en sur <span class="icon brands fa-gitter label"></span></a></a></p><br>
+						<p><a href="#banner" class="scrolly">En savoir plus... <span
+								class="icon solid fa-chevron-down"></span></a></p>
+					</footer>
+					<div id="chat"></div>
+					<script>
+						TockReact.renderChat(document.getElementById('chat'), ' https://demo-bot.tock.ai/io/lavolp/tchatweb/web');
+					</script>
+
+				</div>
+
 
 					<!-- Nav -->
 						<nav id="nav">
@@ -442,7 +471,9 @@
 
 		</div>
 
+	</div>
 		<!-- Scripts -->
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -451,6 +482,24 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<script>
+		window.onscroll = function() {myFunction()};
 
+
+		var header = document.getElementById("chat");
+		var sticky = header.offsetTop;
+
+
+
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				header.classList.add("sticky");
+
+			} else {
+				header.classList.remove("sticky");
+			}
+
+		}
+	</script>
 	</body>
 </html>
