@@ -3148,15 +3148,3 @@ input, select, textarea {
 					}
 
 	}
-
-#chat{
-	z-index: 30;
-	position: fixed;
-	width: 200px;
-    right: 5vw;
-	color: blue;
-	bottom: 2vh;
-	padding: 10px;
-	border-radius: 20px;
-}
-
