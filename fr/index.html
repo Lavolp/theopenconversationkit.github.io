@@ -213,12 +213,12 @@
 						<div id="chat"></div>
 					</div>
 				</div>
-<!--				<div class="chat-input">-->
-<!--					<form>-->
-<!--						<input type="text" id="chat-input" placeholder="Send a message..."/>-->
-<!--						<button type="submit" class="chat-submit" id="chat-submit">send</button>-->
-<!--					</form>-->
-<!--				</div>-->
+				<div class="chat-input">
+					<form>
+						<input type="text" id="chat-input" placeholder="Send a message..."/>
+						<button type="submit" class="chat-submit" id="chat-submit">send</button>
+					</form>
+				</div>
 			</div>
 
 			<!-- Header -->
@@ -671,7 +671,34 @@
 			<script src="assets/js/main.js"></script>
 	<script>
 
-		TockReact.renderChat(document.getElementById('chat'), 'https://demo-bot.tock.ai/io/lavolp/tchatweb/web');
+		TockReact.renderChat(document.getElementById('chat'), 'https://demo-bot.tock.ai/io/lavolp/tchatweb/web', 'referralParameter', {
+			palette: {
+				text: {
+					bot: 'black',
+				},
+				background: {
+					bot: '#fcaa3e',
+				},
+			},
+			sizing: {
+				loaderSize: '8px',
+				borderRadius: '8px',
+				conversation: {
+				//	width: '720px',
+				},
+			},
+			typography: {
+				//fontFamily: 'monospace',
+				//fontSize: '24px',
+			},
+			overrides: {
+				//chat: `background: #fff;`,
+				chatInput: {
+					input: 'color: red;',
+					icon: 'background: red;',
+				},
+			},
+		});
 
 		$(function() {
 		  var INDEX = 0;
