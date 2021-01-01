@@ -213,12 +213,12 @@
 						<div id="chat"></div>
 					</div>
 				</div>
-				<div class="chat-input">
-					<form>
-						<input type="text" id="chat-input" placeholder="Send a message..."/>
-						<button type="submit" class="chat-submit" id="chat-submit">send</button>
-					</form>
-				</div>
+<!--				<div class="chat-input">-->
+<!--					<form>-->
+<!--						<input type="text" id="chat-input" placeholder="Send a message..."/>-->
+<!--						<button type="submit" class="chat-submit" id="chat-submit">send</button>-->
+<!--					</form>-->
+<!--				</div>-->
 			</div>
 
 			<!-- Header -->
@@ -671,7 +671,7 @@
 			<script src="assets/js/main.js"></script>
 	<script>
 
-		TockReact.renderChat(document.getElementById('chat'), 'https://demo-bot.tock.ai/io/lavolp/tchatweb/web', 'referralParameter', {
+		TockReact.renderChat(document.getElementById('chat'), 'https://demo-bot.tock.ai/io/lavolp/tchatweb/web', '', {
 			palette: {
 				text: {
 					bot: 'black',
@@ -694,10 +694,11 @@
 			overrides: {
 				//chat: `background: #fff;`,
 				chatInput: {
-					input: 'color: red;',
-					icon: 'background: red;',
+					input: 'color: balck;',
+					icon: 'background: white;',
 				},
 			},
+
 		});
 
 		$(function() {
