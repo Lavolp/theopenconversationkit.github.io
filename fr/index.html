@@ -208,6 +208,8 @@
 					<span class="chat-box-toggle"><span class="icon fa-window-close"></span></span>
 				</div>
 				<div class="chat-box-body">
+					<div class="ml2">Bonjour	Je suis Toki, ma mission est d'aider à découvrir et utiliser Tock pour construire d'autres bots ...comme moi 😉</div>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 					<div class="chat-box-overlay">
 					</div>
 					<div class="chat-logs">
@@ -808,6 +810,25 @@
 		  })
 
 		})
+		var textWrapper = document.querySelector('.ml2');
+		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+		anime.timeline({loop: true})
+				.add({
+					targets: '.ml2 .letter',
+					scale: [4,1],
+					opacity: [0,1],
+					translateZ: 0,
+					easing: "easeOutExpo",
+					duration: 950,
+					delay: (el, i) => 70*i
+				}).add({
+			targets: '.ml2',
+			opacity: 0,
+			duration: 1000,
+			easing: "easeOutExpo",
+			delay: 1000
+		});
 	</script>
 	</body>
 </html>
