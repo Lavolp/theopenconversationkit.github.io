@@ -3150,12 +3150,14 @@ input, select, textarea {
 
 	}
 
-.ml2 {
-	font-weight: 900;
-	font-size: 3.5em;
-}
-
-.ml2 .letter {
+.welcome {
 	display: inline-block;
-	line-height: 1em;
+	background: rgba(252, 170, 62, 0.34) none repeat scroll 0% 0%;
+	color: black;
+	padding: 0.5em 1.5em;
+	margin-left: 1em;
+	white-space: pre-line;
+	border-radius: 8px 8px 8px 0px;
+	font-size: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
 }

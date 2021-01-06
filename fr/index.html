@@ -208,12 +208,19 @@
 					<span class="chat-box-toggle"><span class="icon fa-window-close"></span></span>
 				</div>
 				<div class="chat-box-body">
+<<<<<<< HEAD
 					<div class="ml2">Bonjour	Je suis Toki, ma mission est d'aider à découvrir et utiliser Tock pour construire d'autres bots ...comme moi 😉</div>
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+=======
+
+>>>>>>> fb62541... udpate_chat_box_welcome_message
 					<div class="chat-box-overlay">
+
 					</div>
+
 					<div class="chat-logs">
 						<div id="chat"></div>
+						<div class="welcome">Bonjour Je suis Toki, ma mission est d'aider à découvrir et utiliser Tock pour construire d'autres bots ...comme moi 😉</div>
 					</div>
 				</div>
 <!--				<div class="chat-input">-->
@@ -672,6 +679,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+<!--			<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>-->
 	<script>
 
 		TockReact.renderChat(document.getElementById('chat'), 'https://demo-bot.tock.ai/io/lavolp/tchatweb/web', '', {
@@ -810,10 +818,10 @@
 		  })
 
 		})
-		var textWrapper = document.querySelector('.ml2');
+		/*var textWrapper = document.querySelector('.ml2');
 		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-		anime.timeline({loop: true})
+		anime.timeline({loop: false})
 				.add({
 					targets: '.ml2 .letter',
 					scale: [4,1],
@@ -827,8 +835,8 @@
 			opacity: 0,
 			duration: 1000,
 			easing: "easeOutExpo",
-			delay: 1000
-		});
+			delay: 5000
+		});*/
 	</script>
 	</body>
 </html>
